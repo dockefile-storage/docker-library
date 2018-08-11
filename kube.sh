@@ -16,6 +16,7 @@ images=(kube-proxy-amd64:v1.11.0
         etcd-amd64:3.2.18
         coredns:1.1.3
         pause-amd64:3.1
+        pause:3.1
         kubernetes-dashboard-amd64:v1.8.3
         k8s-dns-sidecar-amd64:1.14.8
         k8s-dns-kube-dns-amd64:1.14.8
@@ -29,6 +30,10 @@ for imageName in ${images[@]} ; do
     echo ${IMG_NAME} : ${IMG_VERSION}
     create ${IMG_NAME} ${IMG_VERSION}
 done
+
+git add .
+git commit -m "...."
+git pull origin master
 
 #for imageName in ${images[@]} ; do
 #docker pull registry.cn-shenzhen.aliyuncs.com/duyj/$imageName
