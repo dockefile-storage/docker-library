@@ -2,8 +2,7 @@ create(){
 if [ ! -d $1 ];then
 	mkdir -vp  $1
 fi
-
-cat <<EOF >$1/$1:$2 
+cat <<EOF >$1/$1_$2 
 FROM gcr.io/google_containers/$1:$2
 MAINTAINER Xumin Jiang <cjiangxumin@gmail.com>
 EOF
