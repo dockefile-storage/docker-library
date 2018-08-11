@@ -17,13 +17,13 @@ NAME_SPACE=k8s-gcr-io-jxm
 pull_and_rename()
 {
 	echo "docker pull ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1"
-	#docker pull ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1
+	docker pull ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1
 
 	echo "docker tag  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1 $2"
-	#docker tag  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1 $2
+	docker tag  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1 $2
 
 	echo "docker rmi  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1"
-	#docker rmi  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1
+	docker rmi  ${REGISTRY_ALIYUNCS}/${NAME_SPACE}/$1
 }
 
 create(){
