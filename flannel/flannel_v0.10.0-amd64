@@ -1,2 +1,2 @@
-FROM k8s.gcr.io/kube-proxy-amd64:v1.11.0
+FROM quay.io/coreos/flannel:v0.10.0-amd64
 MAINTAINER Xumin Jiang <cjiangxumin@gmail.com>
